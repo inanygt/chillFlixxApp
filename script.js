@@ -1,11 +1,22 @@
 let search = document.getElementById("search");
 let style = document.getElementById("style");
-let currentTime = document.getElementById("currentTime");
+// let currentTime = document.getElementById("currentTime");
 
-const date = new Date();
-currentTime.innerHTML = date;
+// const date = new Date();
+// currentTime.innerHTML = date;
 
 // let output = document.getElementById("output");
+
+let input = document.getElementById("input");
+
+// Execute a function when the user presses a key on the keyboard
+input.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+      
+   document.getElementById("search").click();
+  }
+});
 
 let title = document.getElementById("title");
 let releaseDate = document.getElementById("releaseDate");
@@ -20,9 +31,10 @@ search.addEventListener("click", function () {
          console.log(data);
          console.log(data.Search);
          let output = document.getElementById("output");
-
+         output.innerHTML = " ";
          data.Search.forEach((element) => {
-            output.innerHTML += `<div class="col-md ">
+            
+            output.innerHTML += `<div class="col-lg-3 col-md-4 col-sm-6 ">
             <div class="bg-dark rounded-3"> 
             <div class="title"> ${element.Title} </div>
             
