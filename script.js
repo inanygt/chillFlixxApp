@@ -22,11 +22,14 @@ search.addEventListener("click", function () {
          let output = document.getElementById("output");
 
          data.Search.forEach((element) => {
-            output.innerHTML += `<div class="col-3 bg-light">
-            ${element.Title} <br>
-            ${element.Year} <br>
-            <img src='${element.Poster}'>
+            output.innerHTML += `<div class="col-3 ">
+            <div class="bg-dark rounded-3"> 
+            <div class="title"> ${element.Title} </div>
             
+            <div class="year">   ${element.Year} </div>
+            <img src='${element.Poster}' width="100%"> <br>
+            <button class="btn btn-light m-3">Details</button> <br>
+            </div>
             </div>`;
          });
       })
