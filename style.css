@@ -1,13 +1,23 @@
 .year {
    color: black;
    font-size: 2rem;
-   padding: .2em;
+   padding-left: .3em;
    background-color: lightgrey;
    margin: .3em;
-   border-radius: 15px;
+   border-radius: 40px;
+
 }
 
 .title {
    color: white;
    padding: 1em;
+}
+
+.box {
+   height: 100%;
+}
+
+.btn-details {
+   font-size: .75rem;
+   font-weight: 600;
 }
