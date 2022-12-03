@@ -17,6 +17,7 @@ let modal = document.getElementById("modal-details");
 let modalPoster = document.getElementById("modal-poster");
 let modalInfo = document.getElementById("modal-info");
 let modalFooter = document.getElementById("modal-footer");
+let modalTitle = document.getElementById("modal-title");
 
 search.addEventListener("click", function () {
    let input = document.getElementById("input").value;
@@ -49,19 +50,17 @@ function getDetails(id) {
       .then((res) => res.json())
       .then((data) => {
          console.log(data);
-         modalPoster.innerHTML = `<div class="row">
-            <div class="col">
-               <img src='${data.Poster}'"> 
-            </div>`;
-         modalInfo.innerHTML = `
-         ${data.Title} <br>
-         ${data.Year} <br>
-         ${data.Genre} <br>
-         <i class="fa-solid fa-star"></i> ${data.imdbRating} <br>
-         ${data.Actors}
-         `;
+         modalTitle.innerHTML = `
+         <div class="white"> ${data.Title} </div>`;
+         modalPoster.innerHTML = `<img src='${data.Poster}'">`;
+         modalInfo.innerHTML = `<div class="white">
+         <h1> ${data.Year} </h1>
+         ${data.Genre} <br> <br>
+         <h3> <i class="fa-solid fa-star"></i> ${data.imdbRating} </h3> <br> <br>
+         Actors: ${data.Actors}
+         </div>`;
          modalFooter.innerHTML = `
-         ${data.Plot}
+         <div class="white" id="bigInfo"> ${data.Plot}</div>
          `;
       })
       .catch((error) => console.log(error));
