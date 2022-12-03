@@ -31,7 +31,75 @@
       <div class="container-fluid">
          <div class="row">
             <div class="col">
-               <div>TESTING BRANCH</div>
+               <!-- MODAL -->
+               <!-- get updates / modal trigger -->
+               <section class="bg-light">
+                  <div class="container">
+                     <div class="row justify-content-center">
+                        <div class="col-md-8 text-center"></div>
+                     </div>
+                  </div>
+               </section>
+
+               <!-- modal itself -->
+               <div
+                  class="modal fade"
+                  id="reg-modal"
+                  tabindex="-1"
+                  aria-labelledby="modal-title"
+                  aria-hidden="true"
+               >
+                  <div class="modal-dialog">
+                     <div class="modal-content">
+                        <!-- <div class="modal-header">
+                           <h5 class="modal-title" id="modal-title">
+                              Get the Latest Updates
+                           </h5>
+                           <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                           ></button>
+                        </div> -->
+                        <div class="modal-body">
+                           <div class="row">
+                              <div class="col" id="modal-poster"></div>
+                              <div class="col" id="modal-info"></div>
+                           </div>
+                           <div class="row">
+                              <div class="col" id="modal-footer"></div>
+                           </div>
+                           <!-- <p>
+                              Lorem, ipsum dolor sit amet consectetur
+                              adipisicing elit. Quis, exercitationem laboriosam
+                              nihil minus voluptatibus harum aliquam consequatur
+                              pariatur inventore dignissimos illum excepturi
+                              ratione ipsum sit iusto alias eligendi fugit
+                              laborum?
+                           </p>
+                           <label for="modal-email" class="form-label"
+                              >Your email address:</label
+                           >
+                           <input
+                              type="text"
+                              class="form-control"
+                              id="modal-email"
+                              placeholder="e.g. mario@example.com"
+                           /> -->
+                        </div>
+                        <!-- <div class="modal-footer">
+                           <button type="button" class="btn btn-primary">
+                              Submit
+                           </button>
+                        </div> -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col">
                <h1>Zoek een film</h1>
                <!-- <p id="currentTime"></p> -->
                <input id="input" type="text" placeholder="search here" />
@@ -41,8 +109,6 @@
          </div>
          <div id="modal-details"></div>
          <div class="row m-3 g-1 equal" id="output"></div>
-         
-         
       </div>
    </body>
 
